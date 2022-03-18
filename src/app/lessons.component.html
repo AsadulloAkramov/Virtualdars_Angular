@@ -1,0 +1,7 @@
+<h1> {{ getTitle()}}</h1>
+<ul>
+  <li *ngFor="let lesson of lessons"> {{ lesson }}</li>
+</ul>
+
+<img src="{{ logoUrl }}" alt="">
+<img [src]="logoUrl" alt="">
