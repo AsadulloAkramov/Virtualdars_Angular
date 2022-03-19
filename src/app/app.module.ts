@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LessonsComponent } from './lessons.component';
 import { LessonComponent } from './lesson/lesson.component';
 import { LessonsService } from './lessons.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LessonsService } from './lessons.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [LessonsService],
   bootstrap: [AppComponent]
