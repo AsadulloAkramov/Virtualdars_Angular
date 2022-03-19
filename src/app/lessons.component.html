@@ -1,4 +1,7 @@
 <h1> {{ getTitle()}}</h1>
+<input type="text" (input)="onInput($event)">
+<button (click)="onButtonClicked()"> Test</button>
+<p>{{ userName }}</p>
 <ul>
   <li *ngFor="let lesson of lessons"> {{ lesson }}</li>
 </ul>
