@@ -25,6 +25,7 @@ export class LessonsComponent {
   }
   onButtonClicked(){
     console.log("Button bosildi");
+    this.userName ='';
   }
  
 }
