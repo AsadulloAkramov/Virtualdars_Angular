@@ -14,7 +14,9 @@ export class LessonsComponent {
   userName: string = "";
   lessons!: Array<string>;
   logoUrl:string = 'https://t4.ftcdn.net/jpg/02/81/70/65/240_F_281706507_HFR2DYj1w8bYo6AlzgEtFGPRPegu2yu9.jpg';
-
+  isBtnApplicable:boolean = true;
+  IsBtnSecondaryApplicable: boolean =true;
+  isActive: boolean = true;
   getTitle(): string {
     return this.title;
   }
