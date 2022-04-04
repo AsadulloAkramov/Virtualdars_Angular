@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import { Lesson } from "./lesson/lesson";
 import { LessonsService } from "./lessons.service";
 
 
@@ -7,27 +8,22 @@ import { LessonsService } from "./lessons.service";
   templateUrl: './lessons.component.html'
 })
 export class LessonsComponent {
+
   constructor(lessonsService: LessonsService){
     this.lessons = lessonsService.getLessons();
   }
   title:string = 'Darslar ro\'yxati';
-  userName: string = "";
-  lessons!: Array<string>;
-  logoUrl:string = 'https://t4.ftcdn.net/jpg/02/81/70/65/240_F_281706507_HFR2DYj1w8bYo6AlzgEtFGPRPegu2yu9.jpg';
-  isBtnApplicable:boolean = true;
-  IsBtnSecondaryApplicable: boolean =true;
-  isActive: boolean = true;
+  lessons!: Lesson[];
+  selectedLesson!: Lesson;
+
   getTitle(): string {
     return this.title;
   }
 
-  onInput(event:any){
-    this.userName = event.target.value
-    console.log(event);
+  OnSelect(lesson: Lesson){
+    this.selectedLesson = lesson;
+    console.log(this.selectedLesson);
   }
-  onButtonClicked(){
-    console.log("Button bosildi");
-    this.userName ='';
-  }
+
  
 }

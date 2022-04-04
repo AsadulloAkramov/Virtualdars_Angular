@@ -1,15 +1,7 @@
 <h1> {{ getTitle()}}</h1>
-<input type="text" [(ngModel)] = "userName">
-<button class="btn btn-outline-primary" 
-       (click)="onButtonClicked()"
-       [style.backgroundColor]="isActive ? '#aaa': 'red'">
-        Reset 
-      </button>
-<button [class.btn]="isBtnApplicable" [class.btn-secondary]="IsBtnSecondaryApplicable">Class binding</button>
-<p>{{ userName }}</p>
+<hr>
 <ul>
-  <li *ngFor="let lesson of lessons"> {{ lesson }}</li>
+  <li *ngFor="let lesson of lessons" (click)="OnSelect(lesson)"> {{ lesson.title }}</li>
 </ul>
 
-<img src="{{ logoUrl }}" alt="">
-<img [src]="logoUrl" alt="">
+<app-lesson [lesson]="selectedLesson"></app-lesson>

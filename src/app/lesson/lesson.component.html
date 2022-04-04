@@ -1,1 +1,6 @@
-<p>lesson works!</p>
+ <p>
+    Course name: {{ lesson.title | uppercase }} <br>
+    Course price: {{ lesson.price | currency:'USD'}} <br>
+    Course duration (hour) : {{ lesson.duration | number }} <br>
+    Course enrollment deadline : {{ lesson. intakeDeadline | date}}
+</p>
